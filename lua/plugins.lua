@@ -104,7 +104,10 @@ return require('packer').startup(function()
 	-- Навигация внутри файла по классам и функциям
 	use 'majutsushi/tagbar'
 	-- Замена fzf и ack
-	use 'nvim-telescope/telescope.nvim'
+	use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/plenary.nvim'}}
+}
 
 
   use 'mxw/vim-jsx'
