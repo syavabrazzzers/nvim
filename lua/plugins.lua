@@ -10,16 +10,30 @@ return require('packer').startup(function()
 	use 'neovim/nvim-lspconfig'
 	use 'williamboman/nvim-lsp-installer'
 
+    -- use 'nvim-tree/nvim-web-devicons'
+
+
+    use {
+        'nvim-tree/nvim-web-devicons',
+        config = function()
+          require'nvim-web-devicons'.setup {
+            default = true
+          }
+        end
+    }
+
 	-- Удобное меню для обозрения проблем LSP
 	use {
 		"nvim-lualine/lualine.nvim",
-		requires = {"kyazdani42/nvim-web-devicons", opt = true},
+		requires = {"nvim-tree/nvim-web-devicons", opt = true},
 		config = function()
 			require('lualine').setup()
 		end,
 	}
+
 	use {
-		'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons',
+		'akinsho/bufferline.nvim',
+        requires = {"nvim-tree/nvim-web-devicons", opt = true},
 		config = function()
 			require('bufferline').setup{
 				options = {
@@ -75,25 +89,12 @@ return require('packer').startup(function()
 	-- 'Автоформатирование' кода для всех языков
 	use 'Chiel92/vim-autoformat'
   
-    -- use {
-    --     'kyazdani42/nvim-web-devicons',
-    --     config = function()
-    --       require('kyazdani42/nvim-web-devicons').setup {
-    --         default = true
-    --       }
-    --     end
-    -- }
 
-	use {
-		'kyazdani42/nvim-tree.lua',
-		requires = {'kyazdani42/nvim-web-devicons',},
-		config = function()
-			require("nvim-web-devicons").setup {
-                default = true;
-            }
-		end,
+    -- use 'kyazdani42/nvim-web-devicons'
 
-	}
+  use { 'nvim-tree/nvim-tree.lua',
+    requires = 'nvim-tree/nvim-web-devicons',
+    config = function() require'nvim-tree'.setup {} end, }
 	-- Подсвечивает закрывающий и откры. тэг. Если, где-то что-то не закрыто, то не подсвечивает.
 	use 'idanarye/breeze.vim'
 	-- Закрывает автоматом html и xml тэги. Пишешь <h1> и он автоматом закроется </h1>
