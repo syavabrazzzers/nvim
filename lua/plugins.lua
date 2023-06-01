@@ -74,11 +74,23 @@ return require('packer').startup(function()
 	use 'powerman/vim-plugin-ruscmd'
 	-- 'Автоформатирование' кода для всех языков
 	use 'Chiel92/vim-autoformat'
+  
+    -- use {
+    --     'kyazdani42/nvim-web-devicons',
+    --     config = function()
+    --       require('kyazdani42/nvim-web-devicons').setup {
+    --         default = true
+    --       }
+    --     end
+    -- }
+
 	use {
-		'nvim-tree/nvim-tree.lua',
-		requires = {'nvim-tree/nvim-web-devicons',},
+		'kyazdani42/nvim-tree.lua',
+		requires = {'kyazdani42/nvim-web-devicons',},
 		config = function()
-			require("nvim-tree").setup {}
+			require("nvim-web-devicons").setup {
+                default = true;
+            }
 		end,
 
 	}

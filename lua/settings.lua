@@ -106,6 +106,12 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 -- vim.o.completeopt = 'menuone,preview,noinsert'
 g.lsp_document_highlight_enabled = 1
 
+g.nvim_tree_show_icons = {
+  git = 1,
+  folders = 1,
+  files = 1,
+}
+
 -- luasnip setup
 local luasnip = require 'luasnip'
 -- nvim-cmp setup
