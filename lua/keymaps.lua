@@ -49,5 +49,5 @@ map('n', '<F11>', ':set spell!<CR>', default_opts)
 map('i', '<F11>', '<C-O>:set spell!<CR>', default_opts)
 
 -- Open terminal by CTRL+t 
-map('', '<C-t>', ':ToggleTerm<CR>', default_opts)
+map('', '<C-t>', ':ToggleTerm size=10<CR>', default_opts)
 map('t', '<C-W_w', 'C-W_w', default_opts)
