@@ -47,3 +47,7 @@ map('n', '<F8>', ':TagbarToggle<CR>', default_opts)
 -- <F11> Проверка орфографии  для русского и английского языка
 map('n', '<F11>', ':set spell!<CR>', default_opts)
 map('i', '<F11>', '<C-O>:set spell!<CR>', default_opts)
+
+-- Open terminal by CTRL+t 
+map('', '<C-t>', ':ToggleTerm<CR>', default_opts)
+map('t', '<C-W_w', 'C-W_w', default_opts)
