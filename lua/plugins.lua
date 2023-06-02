@@ -10,9 +10,7 @@ return require('packer').startup(function()
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
 
-<<<<<<< HEAD
     -- use 'nvim-tree/nvim-web-devicons'
-=======
 	-- Удобное меню для обозрения проблем LSP
 	use {
 		"nvim-lualine/lualine.nvim",
@@ -95,7 +93,6 @@ return require('packer').startup(function()
 	use 'majutsushi/tagbar'
 	-- Замена fzf и ack
 	use 'nvim-telescope/telescope.nvim'
->>>>>>> c153352 (a)
 
 
     use {
